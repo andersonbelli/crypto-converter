@@ -1,5 +1,5 @@
-import 'package:crypto_converter/features/crypto_comparison/data/datasources/coins.remote.datasource.dart';
-import 'package:crypto_converter/features/crypto_comparison/data/models/coin.model.dart';
+import 'package:crypto_converter/features/crypto_list/data/datasources/coins.remote.datasource.dart';
+import 'package:crypto_converter/features/crypto_list/data/models/coin.model.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';

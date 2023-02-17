@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:crypto_converter/core/http/http_manager.dart';
 import 'package:crypto_converter/core/utils/server_config.dart';
-import 'package:crypto_converter/features/crypto_comparison/data/models/coin.model.dart';
+import 'package:crypto_converter/features/crypto_list/data/models/coin.model.dart';
 
 abstract class ICoinsRemoteDataSource {
   Future<List<CoinModel>> getCoins();

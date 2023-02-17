@@ -1,6 +1,6 @@
 import 'package:crypto_converter/core/http/models/exception_models.dart';
-import 'package:crypto_converter/features/crypto_comparison/domain/entities/coin.entity.dart';
-import 'package:crypto_converter/features/crypto_comparison/domain/repositories/coins.repository.dart';
+import 'package:crypto_converter/features/crypto_list/domain/entities/coin.entity.dart';
+import 'package:crypto_converter/features/crypto_list/domain/repositories/coins.repository.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class IGetCoinsListUseCase {

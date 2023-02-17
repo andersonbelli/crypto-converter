@@ -1,4 +1,4 @@
-import 'package:crypto_converter/features/crypto_comparison/domain/entities/coin.entity.dart';
+import 'package:crypto_converter/features/crypto_list/domain/entities/coin.entity.dart';
 
 class CoinModel extends Coin {
   const CoinModel({

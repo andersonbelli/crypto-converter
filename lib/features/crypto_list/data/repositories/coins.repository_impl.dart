@@ -1,7 +1,7 @@
 import 'package:crypto_converter/core/http/models/exception_models.dart';
-import 'package:crypto_converter/features/crypto_comparison/data/datasources/coins.remote.datasource.dart';
-import 'package:crypto_converter/features/crypto_comparison/data/models/coin.model.dart';
-import 'package:crypto_converter/features/crypto_comparison/domain/repositories/coins.repository.dart';
+import 'package:crypto_converter/features/crypto_list/data/datasources/coins.remote.datasource.dart';
+import 'package:crypto_converter/features/crypto_list/data/models/coin.model.dart';
+import 'package:crypto_converter/features/crypto_list/domain/repositories/coins.repository.dart';
 import 'package:dartz/dartz.dart';
 
 class CoinsRepository extends ICoinsRepository {

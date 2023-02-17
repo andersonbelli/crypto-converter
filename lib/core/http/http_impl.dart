@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:crypto_converter/core/http/http_manager.dart';
@@ -19,7 +20,23 @@ class HttpImpl extends HttpManager {
       }
 
       log('Log Response - ${response.body}');
-      throw GenericException(response.body);
+
+      var errorMessage = response.body;
+      final responseBody = json.decode(response.body) as Map<String, dynamic>;
+
+      if (response.body.contains('error_message')) {
+        responseBody.forEach((key, value) {
+          if (key == 'status') {
+            (value as Map).forEach((key, value) {
+              if (key == 'error_message') {
+                errorMessage = value.toString();
+              }
+            });
+          }
+        });
+      }
+
+      throw GenericException(errorMessage);
     } catch (e) {
       log('Log Exception - $e');
       throw RequestFailException(message: e.toString());
