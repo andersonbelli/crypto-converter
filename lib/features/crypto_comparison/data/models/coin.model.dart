@@ -1,18 +1,17 @@
-class CoinModel {
-  final String? id;
-  final String? symbol;
-  final String? name;
+import 'package:crypto_converter/features/crypto_comparison/domain/entities/coin.entity.dart';
 
+class CoinModel extends Coin {
   const CoinModel({
-    this.id,
-    this.symbol,
-    this.name,
-  });
+    required String id,
+    required String symbol,
+    required String name,
+  }) : super(id: id, name: name, symbol: symbol);
 
-  CoinModel.fromJson(Map<String, dynamic> json)
-      : id = json['id'] as String?,
-        symbol = json['symbol'] as String?,
-        name = json['name'] as String?;
+  factory CoinModel.fromJson(Map<String, dynamic> json) => CoinModel(
+        id: json['id'] as String,
+        symbol: json['symbol'] as String,
+        name: json['name'] as String,
+      );
 
   Map<String, dynamic> toJson() => {'id': id, 'symbol': symbol, 'name': name};
 }

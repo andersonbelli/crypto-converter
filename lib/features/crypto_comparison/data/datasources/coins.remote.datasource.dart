@@ -2,17 +2,17 @@ import 'package:crypto_converter/core/http/http_manager.dart';
 import 'package:crypto_converter/core/utils/server_config.dart';
 import 'package:crypto_converter/features/crypto_comparison/data/models/coin.model.dart';
 
-abstract class ICoinsListRemoteDataSource {
-  Future<List<CoinModel>> getCoinsList();
+abstract class ICoinsRemoteDataSource {
+  Future<List<CoinModel>> getCoins();
 }
 
-class CoinsListRemoteDataSource extends ICoinsListRemoteDataSource {
+class CoinsRemoteDataSource extends ICoinsRemoteDataSource {
   final HttpManager http;
 
-  CoinsListRemoteDataSource(this.http);
+  CoinsRemoteDataSource({required this.http});
 
   @override
-  Future<List<CoinModel>> getCoinsList() async {
+  Future<List<CoinModel>> getCoins() async {
     final response = await http.get(ServerConfig.COINS_LIST);
 
     return (response as List)
