@@ -1,6 +1,8 @@
+import 'package:crypto_converter/di/core.di.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  CoreDI().registerAll();
   runApp(const MyApp());
 }
 
