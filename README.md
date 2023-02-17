@@ -13,7 +13,7 @@
    - The app helps to get the current price of any cryptocurrencies in any other supported
    - currencies that you need. User must be able to choose below items:
       - a) Crypto currency
-         - List of crypto currencies can be pulled by using /coins/list
+         - List of crypto currencies can be pulled by using ```/coins/list```
       - b) National currency
          - List of supported national currencies can be pulled by using
            ```/simple/supported_vs_currencies```
