@@ -10,7 +10,7 @@ abstract class IGetCoinsListUseCase {
 class GetCoinsListUseCase extends IGetCoinsListUseCase {
   final ICoinsRepository repository;
 
-  GetCoinsListUseCase(this.repository);
+  GetCoinsListUseCase({required this.repository});
 
   @override
   Future<Either<BaseException, List<Coin>>> call() => repository.getCoins();

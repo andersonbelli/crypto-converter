@@ -3,7 +3,7 @@ import 'package:crypto_converter/di/injector.dart';
 import 'package:crypto_converter/features/crypto_comparison/data/datasources/coins.remote.datasource.dart';
 import 'package:crypto_converter/features/crypto_comparison/data/repositories/coins.repository_impl.dart';
 import 'package:crypto_converter/features/crypto_comparison/domain/repositories/coins.repository.dart';
-import 'package:crypto_converter/features/crypto_comparison/domain/usecases/get_coins_list.use_case.dart';
+import 'package:crypto_converter/features/crypto_comparison/domain/usecases/get_coins_list.usecase.dart';
 
 class CoinListDI implements BaseDI {
   @override
@@ -24,7 +24,7 @@ class CoinListDI implements BaseDI {
 
     /// UseCases
     di.registerFactory<IGetCoinsListUseCase>(
-      () => GetCoinsListUseCase(di()),
+      () => GetCoinsListUseCase(repository: di()),
     );
   }
 }
