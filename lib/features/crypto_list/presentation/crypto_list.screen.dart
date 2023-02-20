@@ -70,7 +70,10 @@ class CryptoList extends StatelessWidget {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SupportedCurrenciesList(),
+                    builder: (context) => BlocProvider.value(
+                      value: bloc,
+                      child: const SupportedCurrenciesList(),
+                    ),
                   ),
                 ),
                 child: const Padding(
