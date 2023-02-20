@@ -18,13 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Crypto Converter',
       theme: ThemeData(brightness: Brightness.dark),
-      home: Scaffold(
-        body: MultiBlocProvider(
-          providers: [
-            BlocProvider.value(value: Injector.di<CryptoListBloc>()),
-          ],
-          child: const CryptoList(),
-        ),
+      home: BlocProvider(
+        create: (context) => Injector.di<CryptoListBloc>(),
+        child: const CryptoList(),
       ),
     );
   }

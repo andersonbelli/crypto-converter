@@ -9,6 +9,9 @@ part 'crypto_list.state.dart';
 class CryptoListBloc extends Bloc<CryptoListEvent, CryptoListState> {
   final IGetCoinsListUseCase getCoinsListUseCase;
 
+  Coin? selectedCrypto;
+  List<Coin> coinsList = [];
+
   CryptoListBloc({
     required this.getCoinsListUseCase,
   }) : super(CryptoListInitialState()) {
@@ -19,8 +22,16 @@ class CryptoListBloc extends Bloc<CryptoListEvent, CryptoListState> {
 
       result.fold(
         (l) => emit(CryptoListErrorState(errorMessage: l.message)),
-        (r) => emit(CryptoListLoadedState(coinsList: r)),
+        (r) {
+          coinsList = r;
+          emit(CryptoListLoadedState());
+        },
       );
+    });
+    on<SelectCryptoEvent>((event, emit) async {
+      selectedCrypto = event.selectedCrypto;
+
+      emit(CryptoSelectedState());
     });
     add(GetCryptoListEvent());
   }

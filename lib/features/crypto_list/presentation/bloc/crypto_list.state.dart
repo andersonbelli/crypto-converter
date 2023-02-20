@@ -7,11 +7,9 @@ class CryptoListInitialState extends CryptoListState {}
 
 class CryptoListLoadingState extends CryptoListState {}
 
-class CryptoListLoadedState extends CryptoListState {
-  final List<Coin> coinsList;
+class CryptoListLoadedState extends CryptoListState {}
 
-  CryptoListLoadedState({required this.coinsList});
-}
+class CryptoSelectedState extends CryptoListState {}
 
 class CryptoListErrorState extends CryptoListState {
   final String errorMessage;
