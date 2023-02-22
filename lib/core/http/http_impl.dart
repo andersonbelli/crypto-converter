@@ -9,9 +9,15 @@ import 'models/exception_models.dart';
 
 class HttpImpl extends HttpManager {
   @override
-  Future get(String endpoint) async {
-    final url =
-        Uri.https(ServerConfig.BASE_URL, ServerConfig.API_VERSION + endpoint);
+  Future get({
+    required String endpoint,
+    Map<String, dynamic>? query,
+  }) async {
+    final url = Uri.https(
+      ServerConfig.BASE_URL,
+      ServerConfig.API_VERSION + endpoint,
+      query,
+    );
 
     try {
       final http.Response response = await http.get(url);

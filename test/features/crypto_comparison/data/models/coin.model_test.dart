@@ -1,4 +1,4 @@
-import 'package:crypto_converter/features/crypto_list/data/models/coin.model.dart';
+import 'package:crypto_converter/features/crypto_compare/data/models/coin.model.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../mock_coin.model.dart';

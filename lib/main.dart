@@ -1,7 +1,7 @@
 import 'package:crypto_converter/di/core.di.dart';
 import 'package:crypto_converter/di/injector.dart';
-import 'package:crypto_converter/features/crypto_list/presentation/bloc/crypto_list.bloc.dart';
-import 'package:crypto_converter/features/crypto_list/presentation/crypto_list.screen.dart';
+import 'package:crypto_converter/features/crypto_compare/presentation/bloc/crypto_list.bloc.dart';
+import 'package:crypto_converter/features/crypto_compare/presentation/coins_list.screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: BlocProvider(
         create: (context) => Injector.di<CryptoListBloc>(),
-        child: const CryptoList(),
+        child: const CoinsList(),
       ),
     );
   }

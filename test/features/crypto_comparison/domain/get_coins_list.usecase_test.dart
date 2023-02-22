@@ -1,6 +1,6 @@
 import 'package:crypto_converter/core/http/models/request_fail.exception.dart';
-import 'package:crypto_converter/features/crypto_list/domain/repositories/coins.repository.dart';
-import 'package:crypto_converter/features/crypto_list/domain/usecases/get_coins_list.usecase.dart';
+import 'package:crypto_converter/features/crypto_compare/domain/repositories/coins.repository.dart';
+import 'package:crypto_converter/features/crypto_compare/domain/usecases/get_coins_list.usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';

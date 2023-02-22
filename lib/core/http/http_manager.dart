@@ -1,7 +1,8 @@
 abstract class HttpManager {
   HttpManager();
 
-  Future<dynamic> get(
-    String endpoint,
-  );
+  Future<dynamic> get({
+    required String endpoint,
+    Map<String, dynamic>? query,
+  });
 }

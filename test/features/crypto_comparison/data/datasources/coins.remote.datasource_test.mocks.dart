@@ -5,9 +5,9 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
 
-import 'package:crypto_converter/features/crypto_list/data/datasources/coins.remote.datasource.dart'
+import 'package:crypto_converter/features/crypto_compare/data/datasources/coins.remote.datasource.dart'
     as _i2;
-import 'package:crypto_converter/features/crypto_list/data/models/coin.model.dart'
+import 'package:crypto_converter/features/crypto_compare/data/models/coin.model.dart'
     as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 

@@ -6,9 +6,9 @@
 import 'dart:async' as _i4;
 
 import 'package:crypto_converter/core/http/models/exception_models.dart' as _i5;
-import 'package:crypto_converter/features/crypto_list/domain/entities/coin.entity.dart'
+import 'package:crypto_converter/features/crypto_compare/domain/entities/coin.entity.dart'
     as _i6;
-import 'package:crypto_converter/features/crypto_list/domain/repositories/coins.repository.dart'
+import 'package:crypto_converter/features/crypto_compare/domain/repositories/coins.repository.dart'
     as _i3;
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
