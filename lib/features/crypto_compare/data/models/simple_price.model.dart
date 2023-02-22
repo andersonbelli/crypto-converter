@@ -28,9 +28,11 @@ class SimplePriceModel extends SimplePrice {
       coinTag: coinTag,
       currencyTag: currencyTag,
       coinValue: json[coinTag][currencyTag] as double?,
-      coinMarketCap: double.parse(
-        json[coinTag]['${currencyTag}_market_cap'].toString(),
-      ),
+      coinMarketCap: json[coinTag]['${currencyTag}_market_cap'] != null
+          ? double.parse(
+              json[coinTag]['${currencyTag}_market_cap'].toString(),
+            )
+          : 0,
       coin24hVol: json[coinTag]['${currencyTag}_24h_vol'],
       coin24hChange: json[coinTag]['${currencyTag}_24h_change'] as double?,
       lastUpdatedAt: json[coinTag]['last_updated_at'] as int?,

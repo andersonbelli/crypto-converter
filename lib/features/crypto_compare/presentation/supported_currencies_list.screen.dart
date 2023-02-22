@@ -27,7 +27,7 @@ class SupportedCurrenciesList extends StatelessWidget {
           bloc: bloc,
           listener: (context, state) {
             if (state is ComparePricesState) {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => BlocProvider.value(
