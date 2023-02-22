@@ -1,6 +1,12 @@
+import 'package:crypto_converter/di/core.di.dart';
+import 'package:crypto_converter/di/injector.dart';
+import 'package:crypto_converter/features/crypto_compare/presentation/bloc/crypto_list.bloc.dart';
+import 'package:crypto_converter/features/crypto_compare/presentation/coins_list.screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+void main() async {
+  CoreDI().registerAll();
   runApp(const MyApp());
 }
 
@@ -12,23 +18,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Crypto Converter',
       theme: ThemeData(brightness: Brightness.dark),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Cryptos :)'),
+      home: BlocProvider(
+        create: (context) => Injector.di<CryptoListBloc>(),
+        child: const CoinsList(),
       ),
-      body: const Center(
-        child: Text('Under Construction...'),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
