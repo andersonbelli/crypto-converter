@@ -17,6 +17,12 @@ class CompareCoinsScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: () => bloc.add(CompareCoinsEvent()),
+          ),
+        ],
         backgroundColor: Colors.transparent,
         iconTheme: const IconThemeData(
           color: Colors.amberAccent,
